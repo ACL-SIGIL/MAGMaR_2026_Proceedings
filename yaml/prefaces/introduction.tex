@@ -1,47 +1,81 @@
-We are excited to welcome you to MAGMaR 2025, the first workshop on Multimodal Augmented Generation via Multimodal Retrieval. MAGMaR is being held in Vienna, Austria on August 1, 2025, and is co-located with ACL 2025, which takes place from July 28th-August 1st.
+We are delighted to welcome you to MAGMaR 2026, the second workshop on Multimodal Augmented Generation via Multimodal Retrieval. MAGMaR is being held in San Diego, USA on the 4th of July, 2026, and is co-located with ACL 2026, which takes place from July 2nd through the 7th. This workshop is organized in support of ACL's Special Interest Group on Image and Language (SIGIL).
 
 $ $\par
 
-While information retrieval systems for text documents have been extensively studied for decades, the landscape has shifted; vast amounts of information today are stored as videos with minimal text metadata. For instance, online commercial platforms host billions videos. Despite the explosion of multimodal data, there remains a dearth of research around the efficient retrieval, processing, and synthesis of these massive multimodal collections. Existing systems largely still rely on text metadata (e.g., human written descriptions), overlooking the rich semantic content embedded within the multimodal data itself.
+Audiovisual media is becoming an increasingly dominant form of online information consumption. From firsthand, "in the wild" video footage of natural disasters to professionally edited news coverage of major political events, videos serve as rich sources of information for producing factual, grounded articles. Especially for actively unfolding events, grounding articles in video can help combat misinformation and provide journalists and analysts with tools to quickly synthesize new developments.
 
 $ $\par
 
-Individual research groups have independently begun addressing this challenge, leading to parallel yet disconnected efforts to define the research space. MAGMaR was conceived as a collaborative venue to unify these efforts and foster dialogue, which we believe is crucial for advancing the field. The MAGMaR workshop focuses on two primary areas: (1) the retrieval of multimodal content, which spans text, images, audio, video, and multimodal data (e.g., image-language, video-language); and (2) retrieval-augmented generation, with an emphasis on multimodal retrieval and generation.
+Individual research groups have independently begun addressing this challenge, leading to parallel yet disconnected efforts to define the research space. ACL 2025 hosted the first MAGMaR workshop focused on Video Event Retrieval. This year's iteration focuses on two primary areas: (1) the retrieval of multimodal content spanning text, images, audio, and video; and (2) retrieval-augmented generation, with an emphasis on multimodal retrieval and grounded generation. To further this goal, we are again hosting a shared task, extending this year to full grounded article generation from multiple videos.
 
 $ $\par
 
-To further this goal, we hosted a shared task on event-based video retrieval and understanding, designed to spark interest and facilitate research development in both retrieval and generation. This task’s primary retrieval metric, nDCG@10, compared the final ranked lists of videos produced by participant systems.
+Relevant topics to the workshop this year include document retrieval, multimodal retrieval, retrieval-augmented generation (RAG), multimodal RAG, multimodal question answering, and research on video, image, and audio understanding.
 
 $ $\par
 
-The shared task was built around MultiVENT 2.0 (Kriz et al., 2024). While prior datasets like MSR-VTT (10,000 videos) and MultiVENT (2,400 videos; Sanders et al., 2023) made progress toward multilingual and event-centric video retrieval, they remain small compared to typical text retrieval corpora—e.g., HC4 from the 2022 NeuCLIR shared task, which contains 6 million documents. To address this gap, we introduced MultiVENT 2.0, a large-scale benchmark with over 217,000 videos and 2,549 event-centric queries for a test collection of 109,800 videos. The dataset covers a diverse range of real-world current events and is designed to facilitate both retrieval and generation research.
+To further this goal, we again hosted a shared task focused on video retrieval. Specifically, it focuses on retrieving relevant videos and generating grounded reports that respond to information needs. Given a query describing a real-world current event, participating systems needed to identify pertinent videos from a large multilingual, multimodal collection and use that evidence to produce a coherent and informative written report.
 
 $ $\par
 
-MultiVENT 2.0 has been made publicly available on HuggingFace\footnote{https://huggingface.co/datasets/hltcoe/MultiVENT2.0} and includes extracted features such as visual frames, transcribed speech, embedded text, and frame-level captions. Relevance judgments for the training set were released publicly, while those for the test set were hosted on an Eval.ai leaderboard\footnote{https://eval.ai/web/challenges/challenge-page/2507}. The primary task setting restricts participants to use only the raw video content; using additional metadata or text descriptions is permitted only in an oracle setting.
+There are two tracks:
 
-$ $\par
-
-Several teams submitted strong systems to the leaderboard. The best-performing submission, OmniEmbed, was developed by the Tevatron group from the University of Waterloo: Jiaqi Samantha Zhan, Crystina Zhang, Shengyao Zhuang, Xueguang Ma, and Jimmy Lin. Their best non-oracle system achieved an nDCG@10 of 0.709, a significant improvement over the strongest original baseline (0.324).
-
-$ $\par
-
-This year, the program of MAGMaR includes two keynote talks, one presentation session, and one poster session. In our inaugural year, we received 21 submissions and accepted 14, for an overall acceptance rate of 67\%. Of these, five were accepted as oral presentations. The members of our Program Committee and Organizing Comittee did an excellent job in reviewing the submitted papers, and we thank them for their essential role in selecting the accepted papers and helping produce a high quality program for the conference.
-
+\begin{itemize}
+    \item Retrieval: Systems provide a ranked list of videos in the collection ordered by relevance to the query.
+    \item Generation: Systems produce a text report that answers the information need and grounds its content in the retrieved videos.
+Teams may submit to either track or both. Additional details on submission formats, evaluation, and task instructions are available in the shared task repository.
+\end{itemize}
 
 
 $ $\par
 
+Baseline models are OmniEmbed (with RankVideo reranking) for retrieval and CAG for generation. OmniEmbed was the winner of MAGMaR 2025's shared task which is why it was chosen for this year's baseline.
 
-A workshop requires the hard work of numerous people, both behind the scenes and those that you will see more prominently. First off, we want to say thank you to our two keynote speakers, Desmond Elliott (University of Copenhagen) and Joel Brogan (Oak Ridge National Laboratory) whose interdisciplinary talks are a nice resource for the broader NLP and ACL communities. Both Dr. Elliott's talk ``Recent Experiments in Retrieval-Augmented Image Captionin'' and Dr. Brogan's talk ``When you Don’t Quite Know What You Want: Bridging the Multimodal Search Intention Gap'' cover challenging, state-of-the-art problems at the unique intersection of the focus of MAGMaR and we appreciate the insights that they are sharing. Additonally, we would be remiss to not mention the people who helped organize (and participated) in our shared task on retrieving events in videos. Our online leaderboard received numerous submissions and we continue to have people engaging with it even though the official evaluation is closed.
+$ $\par
+
+The Retrieval track is evaluated using standard IR metrics: nDCG, Recall, and MAP at various cutoffs. Our official evaluation used the average of these scores.
+
+$ $\par
+
+All RAG and Oracle Generation leaderboard scores are evaluated with CLUE (Zhang et al., 2026) and are MiRAGE (Martin et al., 2025) in the reference setting. Human evaluation is done by 3 human annotators. The annotators give a scalar 1-5 score for each article and pick the overall best from the systems for each query.
 
 
 $ $\par
 
-Finally, we thank all contributors, reviewers, and attendees who helped make MAGMaR 2025 possible. We hope you enjoy a day full of engaging talks, thought-provoking posters, and stimulating discussion.
+Several teams submitted strong systems to the leaderboard. The best-performing submission,
+
+$ $\par
+
+For the retrieval task, the OmniEmbed Baseline had an average score across all metrics of 0.500. We had 3 teams submit numerous systems that beat this baseline. Overall, HAIVLab was able to make an impressive improvement to get to 0.832. The best performing system for MARS was 0.759, and Mixedbread got 0.719. Again, all of these beat the very strong baseline of last year's winning system by a substantial margin.
+
+$ $\par
+
+For the generation task, using the oracle ranking list, we use human scoring to rank systems using a Likert Scale of 1-5. The baseline CAG system received 3.088. We had 4 teams submit systems to this track, 2 of which beat the baseline. MARS' best system got a score of 3.833 slightly edging out Pengkhil's 3.825. Additionally, HAIVLab did have some systems receive best summary votes on specific queries. Once more, we received very strong systems that beat a tough baseline.
+
+$ $\par
+
+This year, the program of MAGMaR includes two keynote talks, one presentation session, and one poster session. With an increse in submissions from last year, we were able to accetp 15 out of 26 papers, for an overall acceptance rate of 58\%. Of these, six were accepted as oral presentations. The members of our Program Committee and Organizing Comittee did an excellent job in reviewing the submitted papers, and we thank them for their essential role in selecting the accepted papers and helping produce a high quality program for the conference.
+
+
+
+$ $\par
+
+
+A workshop requires the hard work of numerous people, both behind the scenes and those that you will see more prominently. First off, we want to say thank you to our two keynote speakers, Nanyun (Violet) Peng from UCLA and Chenliang Xu from the University of Rochester
+
+ whose interdisciplinary talks are a nice resource for the broader NLP and ACL communities. Both Dr. Elliott's talk ``Recent Experiments in Retrieval-Augmented Image Captionin'' and Dr. Brogan's talk ``When you Don’t Quite Know What You Want: Bridging the Multimodal Search Intention Gap'' cover challenging, state-of-the-art problems at the unique intersection of the focus of MAGMaR and we appreciate the insights that they are sharing.
+
+$ $\par
+
+Additonally, we would be remiss to not mention the people who helped organize (and participated) in our shared task on retrieving events in videos. Our online leaderboard received numerous submissions and we continue to have people engaging with it even though the official evaluation is closed.
+
+
+$ $\par
+
+Finally, we thank all contributors, reviewers, and attendees who helped make MAGMaR 2026 possible. We hope you enjoy a day full of engaging talks, thought-provoking posters, and stimulating discussion.
 
 $ $\par
 
 $ $\par
 
-Reno Kriz and Kenton Murray, Editors
+Kenton Murray and Reno Kriz, Editors
