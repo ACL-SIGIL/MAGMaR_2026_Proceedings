@@ -1,0 +1,47 @@
+- end_time: 2026-07-04 09:45:00
+  start_time: 2026-07-04 09:30:00
+  title: Welcome Remarks
+- end_time: 2026-07-04 10:30:00
+  start_time: 2026-07-04 09:45:00
+  title: Keynote 1 Nanyun (Violet) Peng, UCLA
+- end_time: 2026-07-04 11:00:00
+  start_time: 2026-07-04 10:30:00
+  title: Break
+- title: Oral Presentations
+  start_time: 2026-07-04 11:00:00
+  end_time: 2026-07-04 12:30:00
+  subsessions:
+    - end_time: 2026-07-04 12:30:00
+      papers:
+        - end_time: 2026-07-04 11:15:00
+          id: 
+          start_time: 2026-07-04 11:00:00
+        - end_time: 2026-07-04 11:30:00
+          id: 
+          start_time: 2026-07-04 11:15:00
+        - end_time: 2026-07-04 11:45:00
+          id: 
+          start_time: 2026-07-04 11:30:00
+        - end_time: 2026-07-04 12:00:00
+          id: 
+          start_time: 2026-07-04 11:45:00
+        - end_time: 2026-07-04 12:15:00
+          id: 
+          start_time: 2026-07-04 12:00:00
+      start_time: 2026-07-04 11:00:00
+      title: Oral Presentations
+- end_time: 2026-07-04 14:00:00
+  start_time: 2026-07-04 12:30:00
+  title: Lunch
+- end_time: 2026-07-04 15:30:00
+  start_time: 2026-07-04 14:00:00
+  title: Poster Session
+- end_time: 2026-07-04 16:00:00
+  start_time: 2026-07-04 15:30:00
+  title: Break
+- end_time: 2026-07-04 16:45:00
+  start_time: 2026-07-04 16:00:00
+  title: Keynote 2 Chenliang Xu, University of Rochester
+- end_time: 2026-07-04 17:00:00
+  start_time: 2026-07-04 16:45:00
+  title: Paper Awards and Closing

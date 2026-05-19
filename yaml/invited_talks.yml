@@ -1,0 +1,27 @@
+- title: "Recent Experiments in Retrieval-Augmented Image Captioning"
+  abstract_file: invited1.tex
+  speaker_name: Dr. Desmond Elliott
+  institution: |
+          Associate Professor
+
+          Department of Computer Science
+          
+          University of Copenhagen
+  bio_file: invited1_bio.tex
+  date: 2025-08-01 09:45:00
+  location: 2.44
+
+- title: "When you Don’t Quite Know What You Want:\nBridging the Multimodal Search Intention Gap" 
+  abstract_file: invited2.tex
+  speaker_name: Dr. Joel Brogan
+  institution: |
+          Research Group Lead – Multimodal Sensor Analytics
+          
+          Center for AI Security Research
+          
+          Energy Systems and Technology Directorate
+          
+          Oak Ridge National Laboratory, Department of Energy
+  bio_file: invited2_bio.tex
+  date: 2025-08-01 16:00:00
+  location: 2.44

@@ -1,0 +1,32 @@
+book_title: Proceedings of the 2nd Workshop on Multimodal Augmented Generation via Multimodal Retrieval (MAGMaR 2026)
+event_name: Workshop on Multimodal Augmented Generation via Multimodal Retrieval
+volume_name: main
+cover_subtitle: Proceedings of the Workshop
+anthology_venue_id: MAGMaR
+start_date: 2026-07-04
+end_date: 2026-07-04
+isbn: 
+location: San Diego, USA
+editors:
+  - first_name: Kenton
+    last_name: Murray*
+  - first_name: Reno
+    last_name: Kriz*
+  - first_name: Francis
+    last_name: Ferraro
+  - first_name: Xiang
+    last_name: Xiang
+  - first_name: Jeremy
+    last_name: Gwinnup
+  - first_name: Alexander
+    last_name: Martin
+  - first_name: Teng
+    last_name: Long
+  - first_name: Andrew
+    last_name: Yates
+  - first_name: Desmond
+    last_name: Elliott
+  - first_name: Joel
+    last_name: Brogan
+publisher: Association for Computational Linguistics
+#watermark_book_title: Proceedings of the 1st Workshop on\\ Multimodal Augmented Generation via Multimodal Retrieval

@@ -1,0 +1,32 @@
+- members:
+  - first_name: Kenton
+    institution: Human Language Technology Center of Excellence, Johns Hopkins University
+    last_name: Murray
+  - first_name: Reno
+    institution: Human Language Technology Center of Excellence, Johns Hopkins University 
+    last_name: Kriz
+  - first_name: Andrew
+    institution: Human Language Technology Center of Excellence, Johns Hopkins University
+    last_name: Yates
+  - first_name: Francis
+    institution: University of Maryland, Baltimore County
+    last_name: Ferraro
+  - first_name: Desmond
+    institution: University of Copenhagen
+    last_name: Elliott
+  - first_name: Xiang
+    institution: Huazhong University of Science and Technology
+    last_name: Xiang
+  - first_name: Alexander
+    institution: Johns Hopkins University
+    last_name: Martin
+  - first_name: Joel
+    institution: OpenAI
+    last_name: Brogan
+  - first_name: Teng
+    institution: University of Amsterdam, University of Trento
+    last_name: Long
+  - first_name: Jeremy
+    institution: Air Force Research Labratory
+    last_name: Gwinnup
+  role: Organizers

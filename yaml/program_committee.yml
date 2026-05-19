@@ -1,0 +1,82 @@
+- entries:
+  - first_name: Xiang
+    institution: Huazhong University of Science and Technology
+    last_name: Xiang
+  - first_name: Dengjia
+    institution: Johns Hopkins University
+    last_name: Zhang
+  - first_name: Reno
+    institution: Human Language Technology Center of Excellence, Johns Hopkins University
+    last_name: Kriz
+  - first_name: Kenton
+    institution: Human Language Technology Center of Excellence, Johns Hopkins University
+    last_name: Murray
+  - first_name: Eugene
+    institution: Human Language Technology Center of Excellence, Johns Hopkins University
+    last_name: Yang
+  - first_name: Francis
+    institution: University of Maryland, Baltimore County
+    last_name: Ferraro
+  - first_name: Jeremy
+    institution: Air Force Research Laboratory
+    last_name: Gwinnup
+  - first_name: Saket
+    institution: OpenAI
+    last_name: Saurabh
+  - first_name: Maitrik
+    institution: Apple
+    last_name: Patel
+  - first_name: Nolan
+    institution: Johns Hopkins University
+    last_name: King
+  - first_name: Cameron
+    institution: Johns Hopkins University
+    last_name: Carpenter
+  - first_name: Will
+    institution: Human Language Technology Center of Excellence, Johns Hopkins University
+    last_name: Walden
+  - first_name: David
+    institution: Human Language Technology Center of Excellence
+    last_name: Etter
+  - first_name: Andrew
+    institution: Human Language Technology Center of Excellence, Johns Hopkins University
+    last_name: Yates
+  - first_name: Tyler
+    institution: Johns Hopkins University
+    last_name: Skow
+  - first_name: Alexnder
+    institution: Johns Hopkins University
+    last_name: Martin
+  - first_name: Goonjan
+    institution: Samsung
+    last_name: Saha
+  - first_name: Parin Rajesh
+    institution: J.P. Morgan Chase
+    last_name: Jhaveri
+  - first_name: Sahil Rajesh
+    institution: Brain Corporation
+    last_name: Dhayalkar
+  - first_name: Joel
+    institution: OpenAI
+    last_name: Brogan
+  - first_name: Teng
+    institution: University of Amsterdam
+    last_name: Long
+  - first_name: Tejas
+    institution: University of Maryland, Baltimore County
+    last_name: Gokhale
+  - first_name: Debashish
+    institution: Australian National University
+    last_name: Chakraborty
+  - first_name: Desmond
+    institution: University of Copenhagen
+    last_name: Elliott
+  role: Program Committee
+- entries:
+  - first_name: Nanyun (Violet)
+    institution: University of California Los Angeles
+    last_name: Peng
+  - first_name: Chenliang
+    institution: University of Rochester
+    last_name: Xu
+  role: Invited Speakers
