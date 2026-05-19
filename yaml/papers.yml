@@ -1,383 +1,535 @@
-- abstract: In this work, we introduce MultiReflect, a novel multimodal self-reflective Retrieval Augmented Generation (RAG)-based automated fact-checking pipeline. MultiReflect is designed to address the challenges of rapidly outdated information, limitations in human query capabilities, and expert knowledge barriers in fact-checking. Our proposed pipeline leverages the latest advancements in Large Language Models (LLMs) and Retrieval Augmented Generation (RAG) to enhance fact verification across text and images. Specifically, by integrating multimodal data processing with RAG-based evidence reflection, our system improves the accuracy of fact-checking by utilizing internet-sourced verification. We evaluate our results on the VERITE benchmarks and using several multimodal LLMs, outperforming baselines in binary classification.
+- abstract: 'Visual Document Retrieval (VDR), which aims to retrieve relevant pages within vast corpora of visually-rich documents, is of significance in current multimodal retrieval applications. The state-of-the-art multi-vector paradigm excels in performance but suffers from prohibitive overhead, a problem that current efficiency methods like pruning and merging address imperfectly, creating a difficult trade-off between compression rate and feature fidelity. To overcome this dilemma, we introduce Prune-then-Merge, a novel two-stage framework that synergizes these complementary approaches. Our method first employs an adaptive pruning stage to filter out low-information patches, creating a refined, high-signal set of embeddings. Subsequently, a hierarchical merging stage compresses this pre-filtered set, effectively summarizing semantic content without the noise-induced feature dilution seen in single-stage methods. Extensive experiments on 29 VDR datasets demonstrate that our framework consistently outperforms existing methods, significantly extending the near-lossless compression range and providing robust performance at high compression ratios.'
   attributes:
     paper_type: long
-    presentation_type: poster
+    presentation_type: oral
   authors:
-  - first_name: Uku
-    institution: University of Tartu, Institute of Computer Science, Estonia
-    last_name: Kangur
-    openreview: ~Uku_Kangur1
-  - first_name: Krish
-    institution: Indian Institute of Technology Indore
-    last_name: Agrawal
-    openreview: ~Krish_Agrawal1
-  - first_name: Yashashvi
-    institution: Indian Institute of Information Technology Dharwad
-    last_name: Singh
-    email: 20bds064@iiitdwd.ac.in
-  - first_name: Ahmed
-    institution: University of Tartu, Institute of Computer Science, Estonia
-    last_name: Sabir
-    openreview: ~Ahmed_Sabir1
-  - first_name: Rajesh
-    institution: University of Tartu, Institute of Computer Science, Estonia and Plaksha University, India
-    last_name: Sharma
-    openreview: ~Rajesh_Sharma1
-  file: 2.pdf
-  id: 2
-  archival: True
-  title: 'MultiReflect: Multimodal Self-Reflective RAG-based Automated Fact-Checking'
-  attachments:
-    - type: copyright
-      file: 2.pdf
-- abstract: In this paper, we introduce CollEx, an innovative multimodal agentic Retrieval-Augmented Generation (RAG) system designed to enhance interactive exploration of extensive scientific collections. Given the overwhelming volume and inherent complexity of scientific collections, conventional search systems often lack necessary intuitiveness and interactivity, presenting substantial barriers for learners, educators, and researchers. CollEx addresses these limitations by employing state-of-the-art Large Vision-Language Models (LVLMs) as multimodal agents accessible through an intuitive chat interface. By abstracting complex interactions via specialized agents equipped with advanced tools, CollEx facilitates curiosity-driven exploration, significantly simplifying access to diverse scientific collections and records therein. Our system integrates textual and visual modalities, supporting educational scenarios that are helpful for teachers, pupils, students, and researchers by fostering independent exploration as well as scientific excitement and curiosity. Furthermore, CollEx serves the research community by discovering interdisciplinary connections and complementing visual data. We illustrate the effectiveness of our system through a proof-of-concept application containing over 64,000 unique records across 32 collections from a local scientific collection from a public university.
-  attributes:
-    paper_type: long
-    presentation_type: poster
-  authors:
-  - first_name: Florian 
-    institution: University of Hamburg, Germany
-    last_name: Schneider
-    openreview: ~Florian_Schneider1
-    email: florian.schneider-1@uni-hamburg.de
-  - first_name: Narges
-    institution: University of Hamburg, Germany
-    last_name: Baba Ahmadi
-    email: narges.baba.ahmadi@studium.uni-hamburg.de
-  - first_name: Niloufar
-    institution: University of Hamburg, Germany
-    last_name: Baba Ahmadi
-    email: niloufar.baba.ahmadi@studium.uni-hamburg.de
-  - first_name: Iris
-    institution: University of Hamburg, Germany
-    last_name: Vogel
-    openreview: iris.vogel@uni-hamburg.de
-  - first_name: Martin
-    institution: University of Hamburg, Germany
-    last_name: Semmann
-    openreview: ~Martin_Semmann1
-  - first_name: Chris
-    institution: University of Hamburg, Germany
-    last_name: Biemann
-    openreview: ~Chris_Biemann1
+  - first_name: Yibo
+    institution: The Hong Kong University of Science and Technology
+    last_name: Yan
+    openreview: ~Yibo_Yan1
+  - first_name: Mingdong
+    institution: Alibaba Group
+    last_name: Ou
+    openreview: ~Mingdong_Ou1
+  - first_name: Yi
+    institution: Alibaba Group
+    last_name: Cao
+    openreview: ~Yi_Cao10
+  - first_name: Xin
+    institution: The Hong Kong University of Science and Technology
+    last_name: Zou
+    openreview: ~Xin_Zou4
+  - first_name: Jiahao
+    institution: The Hong Kong University of Science and Technology
+    last_name: Huo
+    openreview: ~Jiahao_Huo2
+  - first_name: Shuliang
+    institution: The Hong Kong University of Science and Technology
+    last_name: Liu
+    openreview: ~Shuliang_Liu1
+  - first_name: James
+    institution: The Hong Kong University of Science and Technology
+    last_name: Kwok
+    openreview: ~James_Kwok1
+  - first_name: Xuming
+    institution: The Hong Kong University of Science and Technology
+    last_name: Hu
+    openreview: ~Xuming_Hu1
   file: 3.pdf
   id: 3
-  archival: True
-  attachments:
-    - type: copyright
-      file: 3.pdf
-  title: 'CollEX – A Multimodal Agentic RAG System Enabling Interactive Exploration of Scientific Collections'
-- abstract: We introduce VoxRAG, a modular speech-to-speech retrieval-augmented generation system that bypasses transcription to retrieve semantically relevant audio segments directly from spoken queries. VoxRAG employs silence-aware segmentation, speaker diarization, CLAP audio embeddings, and FAISS retrieval using L2-normalized cosine similarity. We construct a 50-query test set recorded as spoken input by a native English speaker. Retrieval quality was evaluated using LLM-as-a-judge annotations. For very relevant segments, cosine similarity achieved a Recall@10 of 0.34. For somewhat relevant segments, Recall@10 rose to 0.60 and nDCG@10 to 0.27, highlighting strong topical alignment. Answer quality was judged on a 0–2 scale across relevance, accuracy, completeness, and precision, with mean scores of 0.84, 0.58, 0.56, and 0.46 respectively. While precision and retrieval quality remain key limitations, VoxRAG shows that transcription-free speech-to-speech retrieval is feasible in RAG systems.
+  archival: False
+  title: 'Sculpting the Vector Space: Towards Efficient Multi-Vector Visual Document Retrieval via Prune-then-Merge Framework'
+- abstract: 'With the rapid proliferation of multimodal information, Visual Document Retrieval (VDR) has emerged as a critical frontier in bridging the gap between unstructured visually rich data and precise information acquisition. Unlike traditional natural image retrieval, visual documents exhibit unique characteristics defined by dense textual content, intricate layouts, and fine-grained semantic dependencies. This paper presents the first comprehensive survey of the VDR landscape, specifically through the lens of the Multimodal Large Language Model (MLLM) era. We begin by examining the benchmark landscape, and subsequently dive into the methodological evolution, categorizing approaches into three primary aspects: multimodal embedding models, multimodal reranker models, and the integration of Retrieval-Augmented Generation (RAG) and Agentic systems for complex document intelligence. Finally, we identify persistent challenges and outline promising future directions, aiming to provide a clear roadmap for future multimodal document intelligence.'
   attributes:
-    paper_type: short
-    presentation_type: poster
+    paper_type: long
+    presentation_type: oral
   authors:
-  - first_name: Zackary 
-    institution: Columbia University
-    last_name: Rackauckas
-    openreview: ~Zackary_Rackauckas1
-    email: zcr2105@columbia.edu
-  - first_name: Julia
-    institution: Columbia University
-    last_name: Hirschberg
-    openreview: ~Julia_Hirschberg1
-    email: julia@cs.columbia.edu
+  - first_name: Yibo
+    institution: The Hong Kong University of Science and Technology
+    last_name: Yan
+    openreview: ~Yibo_Yan1
+  - first_name: Jiahao
+    institution: The Hong Kong University of Science and Technology
+    last_name: Huo
+    openreview: ~Jiahao_Huo2
+  - first_name: Guanbo
+    institution: The Hong Kong University of Science and Technology
+    last_name: Feng
+    openreview: ~Guanbo_Feng1
+  - first_name: Mingdong
+    institution: Alibaba Group
+    last_name: Ou
+    openreview: ~Mingdong_Ou1
+  - first_name: Yi
+    institution: Alibaba Group
+    last_name: Cao
+    openreview: ~Yi_Cao10
+  - first_name: Xin
+    institution: The Hong Kong University of Science and Technology
+    last_name: Zou
+    openreview: ~Xin_Zou4
+  - first_name: Shuliang
+    institution: The Hong Kong University of Science and Technology
+    last_name: Liu
+    openreview: ~Shuliang_Liu1
+  - first_name: Yuanhuiyi
+    institution: The Hong Kong University of Science and Technology
+    last_name: Lyu
+    openreview: ~Yuanhuiyi_Lyu1
+  - first_name: Yu
+    institution: Alibaba Group
+    last_name: Huang
+    openreview: ~Yu_Huang16
+  - first_name: Jungang
+    institution: The Hong Kong University of Science and Technology
+    last_name: Li
+    openreview: ~Jungang_Li1
+  - first_name: Kening
+    institution: University of Illinois at Chicago
+    last_name: Zheng
+    openreview: ~Kening_Zheng1
+  - first_name: Xu
+    institution: The Hong Kong University of Science and Technology
+    last_name: Zheng
+    openreview: ~Xu_Zheng2
+  - first_name: Philip S.
+    institution: University of Illinois Chicago
+    last_name: Yu
+    openreview: ~Philip_S._Yu1
+  - first_name: James
+    institution: The Hong Kong University of Science and Technology
+    last_name: Kwok
+    openreview: ~James_Kwok1
+  - first_name: Xuming
+    institution: The Hong Kong University of Science and Technology
+    last_name: Hu
+    openreview: ~Xuming_Hu1
   file: 4.pdf
   id: 4
-  archival: True
-  title: 'VoxRAG: A Step Toward Transcription-Free RAG Systems in Spoken Question Answering'
-  attachments:
-    - type: copyright
-- abstract: Recent advances in retrieval-augmented generative image captioning (RAG-IC) have significantly improved caption quality by incorporating external knowledge and similar examples into language model-driven caption generators. However, these methods still encounter challenges when applied to real-world scenarios. First, many existing approaches rely on bimodal retrieval datastores that require large amounts of labeled data and substantial manual effort to construct, making them costly and time-consuming. Moreover, they simply retrieve the nearest samples to the input query from datastores, which leads to high redundancy in the retrieved content and subsequently degrades the quality of the generated captions. In this paper, we introduce a novel RAG-IC approach named \textit{\textbf{C}r\textbf{o}ss-modal \textbf{Di}versity-promoting \textbf{Ret}rieval technique} (\textsc{CoDiRet}), which integrates a text-only unimodal retrieval module with our unique cluster-based retrieval mechanism. This proposal simultaneously enhances the scalability of the datastore, promotes diversity in retrieved content, and improves robustness against out-of-domain inputs, which eventually facilitates real-world applications. Experimental results demonstrate that our method, despite being exclusively trained on the COCO benchmark dataset, achieves competitive performance on the in-domain benchmark and generalizes robustly across different domains without additional training.
-  attributes:
-    paper_type: long
-    presentation_type: poster
-  authors:
-  - first_name: Jingyi
-    institution: The Japan Research Institute
-    last_name: You
-    openreview: ~Jingyi_You2
-    email: you.jingyi@jri.co.jp
-  - first_name: Hiroshi
-    institution: The Japan Research Institute
-    last_name: Sasaki
-    openreview: ~Hiroshi_Sasaki1
-    email: sasaki.hiroshi@jri.co.jp
-  - first_name: Kazuma
-    institution: The Japan Research Institute
-    last_name: Kadowaki
-    openreview: ~Kazuma_Kadowaki1
-    email: kadowaki.kazuma@jri.co.jp
-  file: 7.pdf
-  id: 7
-  archival: True
-  title: 'Cross-modal Clustering-based Retrieval for Scalable and Robust Image Captioning'
-  attachments:
-    - type: copyright
-      file: 7.pdf
-- abstract: Retrieval-augmented generation (RAG) is a powerful paradigm for leveraging external data to enhance the capabilities of large language models (LLMs). However, most existing RAG solutions are tailored for single-modality or limited multimodal scenarios, restricting their applicability in real-world contexts where diverse data sources—including text, tables, images, and videos—must be integrated seamlessly. In this work proposes a unified \textit{Multimodal Retrieval-augmented generation (mRAG)} system designed to unify information processing across all four modalities. Our pipeline ingests and indexes data from PDFs and videos using tools like Amazon Textract, Transcribe, Langfuse, and multimodal LLMs (e.g., Claude 3.5 Sonnet) for structured extraction and semantic enrichment. The dataset includes text queries, table lookups, image-based questions, and videos. Evaluation with the Deepeval framework shows improved retrieval accuracy and response quality, especially for structured text and tables. While performance on image and video queries is lower, the multimodal integration framework remains robust, underscoring the value of unified pipelines for diverse data.
-  attributes:
-    paper_type: short
-    presentation_type: poster
-  authors:
-  - first_name: Nazarii
-    institution: SoftServe Inc. and Ukrainian Catholic University
-    last_name: Drushchak
-    openreview: ~Nazarii_Drushchak1
-    email: ndrus@softserveinc.com
-  - first_name: Nataliya
-    institution:  SoftServe Inc.
-    last_name: Polyakovska
-    email: npoly@softserveinc.com
-  - first_name: Maryna
-    institution: SoftServe Inc.
-    last_name: Bautina
-    email: mbaut@softserveinc.com
-  - first_name: Taras
-    institution: SoftServe Inc. and Taras Shevchenko National University of Kyiv
-    last_name: Semenchenko
-    email: tsemenc@softserveinc.com
-  - first_name: Jakub
-    institution: SoftServe Inc.
-    last_name: Koscielecki
-    email: jkosc@softserveinc.com
-  - first_name: Wojciech
-    institution: SoftServe Inc.
-    last_name: Sykala
-    email: wsyka@softserveinc.com
-  - first_name: Michal
-    institution: SoftServe Inc.
-    last_name: Wegrzynowski
-    email: mwegr@softserveinc.com
-  file: 8.pdf 
-  id: 8
-  archival: True
-  title: 'Multimodal Retrieval-Augmented Generation: Unified Information Processing Across Text, Image, Table, and Video Modalities'
-  attachments:
-    - type: copyright
-      file: 8.pdf
-- abstract: Large Vision-Language Models (LVLMs) are becoming increasingly popular for text-vision tasks requiring cross-modal reasoning, but often struggle with fine-grained visual discrimination. This limitation is evident in recent benchmarks like NaturalBench and D3, where closed models such as GPT-4o achieve only 39.6%, and open-source models perform below random chance (25%). We introduce Contrastive decoding with Contrast Images (CoCI), which adjusts LVLM outputs by contrasting them against outputs for similar images (Contrast Images - CIs). CoCI demonstrates strong performance across three distinct supervision regimes. First, when using naturally occurring CIs in benchmarks with curated image pairs, we achieve improvements of up to 98.9% on NaturalBench, 69.5% on D3, and 37.6% on MMVP. Second, for scenarios with modest training data (~5k samples), we show that a lightweight neural classifier can effectively select CIs from similar images at inference time, improving NaturalBench performance by up to 36.8%. Third, for scenarios with no training data, we develop a caption-matching technique that selects CIs by comparing LVLM-generated descriptions of candidate images. Notably, on VQAv2, our method improves VQA performance even in pointwise evaluation settings without explicit contrast images. Our approach demonstrates the potential for enhancing LVLMs at inference time through different CI selection approaches, each suited to different data availability scenarios.
-  attributes:
-    paper_type: short
-    presentation_type: poster
-  authors:
-  - first_name: Avshalom
-    institution: Bar Ilan University
-    last_name: Manevich
-    openreview: ~Avshalom_Manevich1
-    email: avshalomman@gmail.com
-  - first_name: Reut
-    institution: Bar Ilan University
-    last_name: Tsarfaty
-    openreview: ~Reut_Tsarfaty1
-    email: reut.tsarfaty@biu.ac.il
-  file: 9.pdf
-  id: 9
-  archival: True
-  title: 'Making LVLMs Look Twice: Contrastive Decoding with Contrast Images'
-  attachments:
-    - type: copyright
-      file: 9.pdf
-- abstract: While Multimodal Retrieval-Augmented Generation (MRAG) has shown promise in enhancing large language models, existing approaches are difficult to accurately capture the complex structural relationships between text and visual elements. This paper introduces R2AG (Rethinking Retrieval-Augmented Generation), a novel framework that extends MRAG to multimodal multi-level property graphs, significantly improving multimodal coherence understanding. Our approach represents multimodal content as interconnected nodes and edges in a property graph, capturing semantically rich relationships beyond conventional embedding distances. To address the exponential growth of graph complexity with additional hops, we propose an Implicit Chain-of-Thought (Implicit-CoT) technique that efficiently partitions and analyzes local subgraphs while deriving comprehensive features from both node semantics and structural properties. Additionally, we develop an improved graph matching algorithm that not only considers feature consistency but also recognizes semantic approximations and prioritizes rare entities, enhancing matching accuracy and robustness. Extensive experiments on public datasets demonstrate that R2AG outperforms state-of-the-art methods in multiple tasks requiring deep multimodal coherence understanding.
-  attributes:
-    paper_type: long
-    presentation_type: oral
-  authors:
-  - first_name: Siyuan
-    institution: Imperial College London
-    last_name: Yuan
-    openreview: ~Siyuan_Yuan2
-  id: 11
   archival: False
-  title: 'MT2ST: Adaptive Multi-Task to Single-Task Learning'
-- abstract: 'We propose \textbf{MT2ST}, a general and efficient framework for accelerating multi-task training by progressively transitioning to single-task optimization. Unlike conventional multi-task learning (MTL) or single-task fine-tuning (STL), MT2ST dynamically adjusts the training focus via two complementary strategies: \textit{Diminish}, which gradually down-weights auxiliary losses, and \textit{Switch}, which explicitly switches to the primary task at a scheduled point. We demonstrate the effectiveness of MT2ST across three key paradigms: representation learning, transformers, and diffusion models, covering both unimodal (text/image) and multimodal (vision-language) tasks. Extensive experiments show that MT2ST significantly improves training efficiency—achieving up to 56% FLOPs compression—while maintaining or surpassing task performance. These results suggest MT2ST as a general-purpose solution for scalable and adaptive multi-task training. Although this work is general-purpose, it is especially suitable for multimodal settings such as VQA or vision-language retrieval, where auxiliary pretraining (e.g., masked language modeling or contrastive learning) often diverges from final objectives. We include a VQA case study and outline its efficiency for multimodal retrieval.'
-  attributes: 
+  title: 'Unlocking Multimodal Document Intelligence: From Current Triumphs to Future Frontiers of Visual Document Retrieval'
+- abstract: 'This paper introduces the Cross-Modal Conflict Benchmark (CMC-Bench) to evaluate how multimodal retrieval-augmented generation (RAG) systems handle contradicting evidence between retrieved text and images. Using 3,768 instances from ChartQA and MMMU evaluation splits, the study benchmarks four open vision-language models (VLMs) across four conflict types (factual, temporal, entity, and granularity) and four evidence conditions: aligned (both modalities support the gold answer), image-correct (image supports the gold and text contradicts it), text-correct (text supports the gold and the image is wrong or swapped), and both-wrong}(neither modality supports the gold). Key findings reveal that cross-modal disagreement severely degrades performance, with change in accuracy between 0.17 and 0.46 relative to aligned evidence. Results show models often exhibit a modality lean rather than reliable arbitration, with text-leaning systems particularly vulnerable when only the image is correct. Furthermore, merging abstention and fabrication into a single hallucination score obscures critical behavioral differences; for instance, Qwen3-VL-4B abstains on 31.7% of conflicts, while Gemma-3n-E2B fabricates unsupported answers in 51.9% of conflicts. Multimodal RAG evaluation should explicitly distinguish abstention from fabrication to assess reliability accurately.'
+  attributes:
     paper_type: long
     presentation_type: poster
   authors:
-  - first_name: Dong
-    institution: Yale University
-    last_name: Liu
-    openreview: ~Dong_Liu24
-    email: dong.liu.dl2367@yale.edu
-  - first_name: Yanxuan
-    institution: Columbia University
-    last_name: Yu
-    openreview: ~Yanxuan_Yu1
-    email: yy3523@columbia.edu
-  file: 12.pdf
-  id: 12
+  - first_name: Jasper Kyle
+    institution: Tokyo University of Foreign Studies
+    last_name: Catapang
+    openreview: ~Jasper_Kyle_Catapang1
+  file: 5.pdf
+  id: 5
   archival: True
-  title: 'MT2ST: Adaptive Multi-Task to Single-Task Learning'
+  title: 'When Image and Text Disagree: Cross-Modal Evidence Conflict in Multimodal Retrieval-Augmented Generation'
   attachments:
     - type: copyright
-      file: 13.pdf
-- abstract: 'This paper introduces a multimodal retrieval-augmented generation (RAG) system designed to enhance language understanding and generation for low-resource languages. By integrating textual, visual, and geospatial data, the system leverages cross-lingual adaptation and multimodal augmentation to bridge the gap between high-resource and low-resource languages. Evaluated on the MM-COVID and LORELEI datasets, the system demonstrates superior performance in retrieval (precision: 85%, recall: 82%) and generation (BLEU: 28.4) tasks compared to baselines. Case studies in public health communication and disaster response highlight its practical utility. The results underscore the potential of multimodal AI to democratize access to technology and address global challenges in low-resource settings.'
-  attributes:
-    paper_type: long
-    presentation_type: poster
-  authors: 
-  - first_name: Zichao
-    institution: Canoakbit Alliance
-    last_name: Li
-    openreview: ~Zichao_Li8
-    email: zichaoli@canoakbit.com
-  - first_name: Zong
-    institution: National University of Singapore
-    last_name: Ke
-    openreview: ~Zong_Ke2
-    email: a0129009@u.nus.edu
-  file: 13.pdf
-  id: 13
-  archival: True
-  title: Cross-Modal Augmentation for Low-Resource Language Understanding and Generation
-  attachments:
-    - type: copyright
-      file: 13.pdf
-- abstract: Multimodal retrieval augmented generation (M-RAG) has recently emerged as a method to inhibit hallucinations of large multimodal models (LMMs) through a factual knowledge base (KB). However, M-RAG also introduces new attack vectors for adversaries that aim to disrupt the system by injecting malicious entries into the KB. In this work, we present a poisoning attack against M-RAG targeting visual document retrieval applications, where the KB contains images of document pages. Our objective is to craft a single image that is retrieved for a variety of different user queries, and consistently influences the output produced by the generative model, thus creating a universal denial-of-service~(DoS) attack against the M-RAG system. We demonstrate that while our attack is effective against a diverse range of widely-used, state-of-the-art retrievers (embedding models) and generators (LMMs), it can also be ineffective against robust embedding models. Our attack not only highlights the vulnerability of M-RAG pipelines to poisoning attacks, but also sheds light on a fundamental weakness that potentially hinders their performance even in benign settings.
-  attributes:
-    paper_type: short
-    presentation_type: oral
-  authors:
-  - first_name: Ezzeldin
-    institution: The Alan Turing Institute
-    last_name: Shereen
-    openreview: ~Ezzeldin_Shereen1
-  - first_name: Dan
-    institution: The Alan Turing Institute and University College London
-    last_name: Ristea
-    openreview: ~Dan_Ristea1
-  - first_name: Burak
-    institution: The Alan Turing Institute
-    last_name: Hasircioglu
-    openreview: ~Burak_Hasircioglu1
-  - first_name: Shae
-    institution: The Alan Turing Institute, University College London, and King’s College London
-    last_name: McFadden
-    openreview: ~Shae_McFadden1
-  - first_name: Vasilios
-    institution: The Alan Turing Institute
-    last_name: Mavroudis
-    openreview: ~Vasilios_Mavroudis1
-  - first_name: Chris
-    institution: The Alan Turing Institute
-    last_name: Hicks
-    openreview: ~Chris_Hicks1
-  id: 15
-  archival: False
-  title: 'One Pic is All it Takes: Poisoning Visual Document Retrieval Augmented Generation with a Single Image (Short Paper)'
-- abstract: Multimodal in-context learning (ICL) is a vital capability for Large Vision-Language Models (LVLMs), allowing task adaptation via contextual prompts without parameter retraining. However, its application is hindered by the token-intensive nature of inputs and the high complexity of cross-modal few-shot learning, which limits the expressive power of representation methods. To tackle these challenges, we propose \textbf{M²IV}, a method that substitutes explicit demonstrations with learnable \textbf{I}n-context \textbf{V}ectors directly integrated into LVLMs. By exploiting the complementary strengths of multi-head attention (\textbf{M}HA) and multi-layer perceptrons (\textbf{M}LP), M²IV achieves robust cross-modal fidelity and fine-grained semantic distillation through training. This significantly enhances performance across diverse LVLMs and tasks and scales efficiently to many-shot scenarios, bypassing the context window limitations. We also introduce \textbf{VLibrary}, a repository for storing and retrieving M²IV, enabling flexible LVLM steering for tasks like cross-modal alignment, customized generation and safety improvement. Experiments across seven benchmarks and three LVLMs show that M²IV surpasses Vanilla ICL and prior representation engineering approaches, with an average accuracy gain of \textbf{3.74%} over ICL with the same shot count, alongside substantial efficiency.
-  attributes: 
-    paper_type: long
-    presentation_type: oral
-  authors:
-  - first_name: Yanshu
-    institution: Brown Univeristy
-    last_name: Li
-    openreview: ~Yanshu_Li1
-    email: yanshu_li1@brown.edu
-  - first_name: Yi
-    institution: Soochow University
-    last_name: Cao
-    openreview: ~Yi_Cao6
-  - first_name: Xi
-    institution: University of Alabama at Birmingham
-    last_name: Xiao
-    openreview: ~Xi_Xiao2
-  - first_name: Tianyang
-    institution: University of Alabama at Birmingham
-    last_name: Wang
-    openreview: ~Tianyang_Wang1
-  id: 17
-  archival: False
-  title: 'M2IV: Towards Efficient and Fine-grained Multimodal In-Context Learning in Large Vision-Language Models'
-- abstract: 'Recent approaches have shown impressive proficiency in extracting and leveraging parametric knowledge from Large-Language Models (LLMs) and Vision-Language Models (VLMs). In this work, we consider how we can improve the identification and retrieval of videos related to complex real-world events by automatically extracting latent parametric knowledge about those events. We present Q2E: a Query-to-Event decomposition method for zero-shot multilingual text-to-video retrieval, adaptable across datasets, domains, LLMs, or VLMs. Our approach demonstrates that we can enhance the understanding of otherwise overly simplified human queries by decomposing the query using the knowledge embedded in LLMs and VLMs. We additionally show how to apply our approach to both visual and speech-based inputs. To combine this varied multimodal knowledge, we adopt entropy-based fusion scoring for zero-shot fusion. Through evaluations on two diverse datasets and multiple retrieval metrics, we demonstrate that Q2E outperforms several state-of-the-art baselines. Our evaluation also shows that integrating audio information can significantly improve text-to-video retrieval. We have released (anonymized) code and data for future research.'
-  attributes:
-    paper_type: long
-    presentation_type: oral
-  authors:
-  - first_name: Shubhashis Roy
-    institution: University of Maryland, Baltimore County
-    last_name: Dipta
-    openreview: ~Shubhashis_Roy_Dipta1
-  - first_name: Francis
-    institution: University of Maryland, Baltimore County
-    last_name: Ferraro
-    openreview: ~Francis_Ferraro1
-  id: 19
-  archival: False
-  title: 'Q2E: Query-to-Event Decomposition for Zero-Shot Multilingual Text-to-Video Retrieval'
-- abstract: Despite recent advancements in neural retrieval, representing text fragments or phrases with proper contextualized embeddings is still challenging. Particularly in video retrieval, where documents are text extracted through OCR from the frames or ASR from audio tracks, the textual content is rarely complete sentences but only a bag of phrases. In this work, we propose FORTIFY, a generative model fine-tuning approach for noisy document rewriting and summarization, to improve the downstream retrieval effectiveness. By experimenting on MultiVENT 2.0, an informational video retrieval benchmark, we show Llama fine-tuned with FORTIFY provides an effective document expansion, leading to a 30% improvement over prompting an out-of-box Llama model on nDCG@10. Zero-shot transferring the model tailored for MultiVENT 2.0 to two out-of-distribution datasets still demonstrates competitive retrieval effectiveness to other document preprocessing alternatives.
+      file: 5.pdf
+- abstract: "We introduce the task of grounded article generation with the goal of creating a Wikipedia-style article from multiple diverse videos about real-world events---from natural disasters to political elections---where all the information in the article is supported by video evidence. Videos are intuitive sources for retrieval-augmented generation (RAG), but most contemporary RAG workflows focus heavily on text while existing methods for video-based summarization focus on low-level scene understanding rather than high-level event semantics. To close this gap, we introduce WikiVideo, a benchmark consisting of expert-written articles and densely annotated videos that provide evidence for articles' claims, facilitating the integration of video into RAG pipelines and enabling the creation of in-depth content that is grounded in multimodal sources. We further propose Collaborative Article Generation (CAG), a novel interactive method for article creation from multiple videos. CAG leverages an iterative interaction between an r1-style reasoning model and a VideoLLM to draw higher-level inferences about the target event than is possible with VideoLLMs alone, which fixate on low-level visual features. We benchmark state-of-the-art VideoLLMs and CAG in both oracle retrieval and RAG settings and find that CAG consistently outperforms alternative methods, while suggesting intriguing avenues for future work."
   attributes:
     paper_type: long
     presentation_type: poster
   authors:
-  - first_name: Dan
-    institution: Georgetown University
-    last_name: DeGenaro
-    openreview: ~Dan_DeGenaro1
-    email: drd92@georgetown.edu
-  - first_name: Eugene
-    institution: Human Language Technology Center of Excellence, Johns Hopkins University
-    last_name: Yang
-    openreview: ~Eugene_Yang2
-  - first_name: David
-    institution: Human Language Technology Center of Excellence
-    last_name: Etter
-    openreview: ~David_Etter1
-  - first_name: Cameron
-    institution: Johns Hopkins University
-    last_name: Carpenter
-    openreview: ~Cameron_Carpenter1
-  - first_name: Kate
-    institution: Johns Hopkins University
-    last_name: Sanders
-    openreview: ~Kate_Sanders1
   - first_name: Alexander
     institution: Johns Hopkins University
     last_name: Martin
     openreview: ~Alexander_Martin1
-  - first_name: Kenton
-    institution: Human Language Technology Center of Excellence, Johns Hopkins University
-    last_name: Murray
-    openreview: ~Kenton_Murray1
   - first_name: Reno
-    institution: Human Language Technology Center of Excellence, Johns Hopkins University
+    institution: Johns Hopkins University
     last_name: Kriz
     openreview: ~Reno_Kriz1
-  file: 20.pdf
-  id: 20
+  - first_name: William
+    institution: Johns Hopkins University
+    last_name: Gantt Walden
+    openreview: ~William_Gantt_Walden1
+  - first_name: Kate
+    institution: Johns Hopkins University
+    last_name: Sanders
+    openreview: ~Kate_Sanders1
+  - first_name: Hannah
+    institution: Johns Hopkins University
+    last_name: Recknor
+    openreview: ~Hannah_Recknor1
+  - first_name: Eugene
+    institution: Johns Hopkins University
+    last_name: Yang
+    openreview: ~Eugene_Yang2
+  - first_name: Francis
+    institution: University of Maryland, Baltimore County
+    last_name: Ferraro
+    openreview: ~Francis_Ferraro1
+  - first_name: Benjamin
+    institution: Johns Hopkins University
+    last_name: Van Durme
+    openreview: ~Benjamin_Van_Durme2
+  file: 8.pdf
+  id: 8
+  archival: False
+  title: 'WikiVideo: Article Generation from Multiple Videos'
+- abstract: ''
+  attributes:
+    paper_type: long
+    presentation_type: poster
+  authors:
+  - first_name: Alexander
+    institution: Johns Hopkins University
+    last_name: Martin
+    openreview: ~Alexander_Martin1
+  - first_name: William
+    institution: Johns Hopkins University
+    last_name: Gantt Walden
+    openreview: ~William_Gantt_Walden1
+  - first_name: Reno
+    institution: Johns Hopkins University
+    last_name: Kriz
+    openreview: ~Reno_Kriz1
+  - first_name: Dengjia
+    institution: Johns Hopkins University
+    last_name: Zhang
+    openreview: ~Dengjia_Zhang1
+  - first_name: Kate
+    institution: Johns Hopkins University
+    last_name: Sanders
+    openreview: ~Kate_Sanders1
+  - first_name: Eugene
+    institution: Johns Hopkins University
+    last_name: Yang
+    openreview: ~Eugene_Yang2
+  - first_name: Chihsheng
+    institution: University of Rochester
+    last_name: Jin
+    openreview: ~Chihsheng_Jin1
+  - first_name: Benjamin
+    institution: Johns Hopkins University
+    last_name: Van Durme
+    openreview: ~Benjamin_Van_Durme2
+  file: 9.pdf
+  id: 9
+  archival: False
+  title: 'Seeing Through the MiRAGE: Evaluating Multimodal Retrieval Augmented Generation'
+- abstract: 'While Multimodal Retrieval-Augmented Generation (M-RAG) enhances Large Vision-Language Models, it remains highly susceptible to cross-modal hallucinations, causal fabrications, and sycophancy. Furthermore, existing mitigation pipelines often face an intervention paradox: static rules tend to unnecessarily disrupt accurate generations, whereas leaving the multi-modal reasoning completely unguided allows existing mismatches to cascade into severe logical fabrications. To quantify and mitigate these hallucinations, we propose a Multi-Agent system, MODE-RAG, driven by Variational Free Energy (VFE) and internal attention states to dynamically gate interventions. High-risk queries are routed to five stage-specific agents, integrating Monte Carlo Tree Search (MCTS) for rigorous causal derivation and logit perturbations to penalize sycophancy. Dedicated Correction and Overseer agents ensure formatting stability and perform post-hoc factual verification. To objectively evaluate our approach, we introduce ModeVent, a challenging subset derived from the MultiVent dataset. Extensive experiments indicate that our system effectively reduces hallucination rates and logical fabrication, significantly improving the robustness of M-RAG systems.'
+  attributes:
+    paper_type: long
+    presentation_type: poster
+  authors:
+  - first_name: Zehang
+    institution: Huazhong University of Science and Technology
+    last_name: Wei
+    openreview: ~Zehang_Wei1
+  - first_name: JiaXin
+    institution: Huazhong University of Science and Technology
+    last_name: Dai
+    openreview: ~JiaXin_Dai3
+  - first_name: Jiamin
+    institution: Huazhong University of Science and Technology
+    last_name: Yan
+    openreview: ~Jiamin_Yan1
+  - first_name: Xiang
+    institution: Huazhong University of Science and Technology
+    last_name: Xiang
+    openreview: ~Xiang_Xiang1
+  file: 12.pdf
+  id: 12
   archival: True
-  title: 'FORTIFY: Generative Model Fine-tuning with ORPO for ReTrieval Expansion of InFormal NoisY Text'
+  title: 'MODE-RAG: Manifold Outlier Diagnosis and Energy-based Retrieval-Augmented Generation Evaluation'
   attachments:
     - type: copyright
-      file: 20.pdf
-- abstract: Effective video retrieval remains challenging due to the complexity of integrating visual, auditory, and textual modalities. In this paper, we explore unified retrieval methods using OmniEmbed, a powerful multimodal embedding model from the Tevatron 2.0 toolkit, in the context of the MAGMaR shared task. Evaluated on the comprehensive MultiVENT 2.0 dataset, OmniEmbed generates unified embeddings for text, images, audio, and video, enabling robust multimodal retrieval. By fine-tuning OmniEmbed with the combined multimodal data—visual frames, audio tracks, and textual descriptions—provided in MultiVENT 2.0, we achieve substantial improvements in complex, multilingual video retrieval tasks. Our submission achieved the highest score on the MAGMaR shared task leaderboard among public submissions as of May 20th, 2025, highlighting the practical effectiveness of our unified multimodal retrieval approach. Code and model checkpoints will be released.
+      file: 12.pdf
+- abstract: 'In multimodal information retrieval (MMIR), candidates relevant to an input query need to be retrieved from a database, where the query and database items span different modalities. As real-world databases evolve, repeatedly annotating and indexing data and re-optimizing domain-specific models across modalities is impractical. We present MULTI-SCORE, a fine-tuning-free, two-stage MMIR approach that couples efficient candidate filtering with fine-grained multimodal re-ranking. Stage-1 adopts Matryoshka representations to efficiently filter out low-relevance candidates without expensive similarity computations on full-scale representations for the entire database. Stage-2 re-ranks the filtered candidates by computing their fine-grained multimodal contextual representations with two scoring functions for semantic alignment using chain-of-thought prompting and question-answering. Experiments demonstrate state-of-the-art zero-shot retrieval on 12 MMIR tasks across 32 datasets while outperforming supervised methods on 23 datasets.'
+  attributes:
+    paper_type: long
+    presentation_type: poster
+  authors:
+  - first_name: Sourajit
+    institution: University of Maryland, Baltimore County
+    last_name: Saha
+    openreview: ~Sourajit_Saha1
+  - first_name: Tejas
+    institution: University of Maryland, Baltimore County
+    last_name: Gokhale
+    openreview: ~Tejas_Gokhale1
+  file: 15.pdf
+  id: 15
+  archival: False
+  title: 'Zero-Shot Multimodal Retrieval with Multi-Scale Contextual Representations'
+- abstract: "We introduce Video-SCOUT, a novel dataset of sixty 20-minute robot-recorded videos from human-robot collaborative exploration exercises, together with a new video analysis method for these types of exploration videos. Unlike video from stationary cameras where detection of motion can help identify events of interest, the camera in an exploration task is constantly in motion while the environment is stationary. Our analysis method---Non-Event Oriented Video Assessments (NOVA)---uses vision-language models to select frames relevant for supporting a particular assessment within continuous long-form videos. Results of testing with two different video-language models reveals a trade-off in precision and recall, and exhibits gains in overall recall when combined with a human's knowledge, suggesting that NOVA may improve a human analysis of robot-navigation. We outline future work to mitigate miscommunication in human-robot interaction by leveraging dialogue with NOVA in support of better collaboration."
   attributes:
     paper_type: long
     presentation_type: oral
   authors:
-  - first_name: Jiaqi Samantha
-    institution: University of Waterloo
-    last_name: Zhan
-    openreview: ~Jiaqi_Samantha_Zhan1
-  - first_name: Crystina
-    institution: University of Waterloo
+  - first_name: Stephanie M.
+    institution: DEVCOM Army Research Laboratory
+    last_name: Lukin
+    openreview: ~Stephanie_M._Lukin1
+  - first_name: Kimberly A.
+    institution: Army Research Laboratory
+    last_name: Pollard
+  - first_name: Claire
+    institution: Army Research Laboratory
+    last_name: Bonial
+    openreview: ~Claire_Bonial1
+  - first_name: Cory J.
+    institution: Army Research Laboratory
+    last_name: Hayes
+  - first_name: Ron
+    institution: University of Southern California
+    last_name: Artstein
+    openreview: ~Ron_Artstein1
+  - first_name: Kallirroi
+    institution: University of Southern California
+    last_name: Georgila
+    openreview: ~Kallirroi_Georgila1
+  - first_name: David
+    institution: University of Southern California
+    last_name: Traum
+    openreview: https://openreview.net/profile?id=~David_Traum1
+  file: 18.pdf
+  id: 18
+  archival: True
+  title: 'Non-Event Oriented Video Assessments in Long-Form Robot Videos'
+  attachments:
+    - type: copyright
+      file: 18.pdf
+- abstract: 'Solving complex reasoning tasks may involve visual understanding, domain knowledge retrieval, numerical calculation, and multi-step reasoning. Existing methods augment large language models (LLMs) with external tools but are restricted to specialized domains, limited tool types, or require additional training data. In this paper, we introduce OctoTools, a training-free, user-friendly, and easily extensible multi-agent framework designed to tackle complex reasoning across diverse domains. OctoTools introduces standardized tool cards to encapsulate tool functionality, a planner for both high-level and low-level planning, and an executor to carry out tool usage. We validate OctoTools’ generality across 16 diverse tasks (including MathVista, MMLU-Pro, MedQA, and GAIA-Text), achieving substantial average accuracy gains of 9.3% over GPT-4o. Furthermore, OctoTools also outperforms AutoGen, GPT-Functions, and LangChain by up to 10.6% when given the same set of tools. Through comprehensive analysi, ablations, and robustness tests with compact backbones and noisy tool environments, OctoTools demonstrates advantages in task planning, effective tool usage, and multi-step problem solving. Code, demos, and visualization are publicly available at https://octotools.github.io/.'
+  attributes:
+    paper_type: long
+    presentation_type: oral
+  authors:
+  - first_name: Pan
+    institution: Stanford University
+    last_name: Lu
+    openreview: ~Pan_Lu2
+  - first_name: Bowen
+    institution: Stanford University
+    last_name: Chen
+    openreview: ~Bowen_Chen3
+  - first_name: Sheng
+    institution: Stanford University
+    last_name: Liu
+    openreview: ~Sheng_Liu2
+  - first_name: Rahul
+    institution: Stanford University
+    last_name: Thapa
+    openreview: ~Rahul_Thapa1
+  - first_name: Joseph
+    institution: Stanford University
+    last_name: Boen
+    openreview: ~Joseph_Boen1
+  - first_name: James
+    institution: Stanford University
+    last_name: Zou
+    openreview: ~James_Zou1
+  file: 19.pdf
+  id: 19
+  archival: True
+  title: 'OctoTools: A Multi-Agent Framework with Extensible Tools for Complex Reasoning'
+  attachments:
+    - type: copyright
+      file: 19.pdf
+- abstract: 'Key Information Extraction (KIE) in visually-rich documents is inherently token-centric, yet prevailing multimodal encoders often fuse dense visual patches with text tokens indiscriminately, which can introduce low-density visual noise, intensify modality competition, and cause robustness collapse under distribution shifts. We propose OTCR, a lightweight and architecture-agnostic framework that turns vision from a competitor into a selective supporter for extraction. OTCR learns sparse, interpretable cross-modal coupling via optimal transport to route local visual evidence to the most relevant text tokens, applies token-level gating to control injection strength, and further suppresses spurious correlations through a variational information bottleneck. Experiments on FUNSD, CORD, and SROIE show consistent gains when OTCR is plugged into LayoutLMv3 and GeoLayoutLM, and ablations verify the complementary contributions of coupling, gating, and bottlenecking. Under distribution shifts from Do-GOOD and EC-FUNSD, OTCR markedly mitigates performance degradation, indicating that controlled visual evidence can effectively compensate when text/layout shortcuts become unreliable.'
+  attributes:
+    paper_type: long
+    presentation_type: poster
+  authors:
+  - first_name: Yang
+    institution: University of the Chinese Academy of Sciences
+    last_name: Li
+    openreview: ~Yang_Li157
+  - first_name: Yajiao
+    institution: University of the Chinese Academy of Sciences
+    last_name: Wang
+    openreview: ~Yajiao_Wang1
+  - first_name: Wenhao
+    institution: Hong Kong Polytechnic University
+    last_name: Hu
+    openreview: ~Wenhao_Hu2
+  - first_name: Mengting
+    institution: University of the Chinese Academy of Sciences
     last_name: Zhang
-    openreview: ~Crystina_Zhang1
-  - first_name: Shengyao
-    institution: CSIRO and The University of Queensland
-    last_name: Zhuang
-    openreview: ~Shengyao_Zhuang1
-  - first_name: Xueguang
-    institution: University of Waterloo
-    last_name: Ma
-    openreview: ~Xueguang_Ma1
-  - first_name: Jimmy
-    institution: University of Waterloo
-    last_name: Lin
-    openreview: ~Jimmy_Lin2
-    email: 
-  id: S-9
-  archival: False
-  title: 'OmniEmbed-MultiVent: Unified End-to-end All-modality Retrieval'
+    openreview: ~Mengting_Zhang3
+  - first_name: Zhixiong
+    institution: University of the Chinese Academy of Sciences
+    last_name: Zhang
+    openreview: ~zhixiong_zhang4
+  file: 22.pdf
+  id: 22
+  archival: True
+  title: 'Less is More: Controlled Visual Evidence Routing and Redundancy Compression for Key Information Extraction'
+  attachments:
+    - type: copyright
+      file: 22.pdf
+- abstract: 'Recent advances in multimodal retrieval have improved the ability to retrieve information from visually rich documents such as PDFs and reports. However, existing benchmarks remain largely centered on English and provide limited coverage of Korean visual documents with complex structures. Furthermore, most existing Korean resources primarily evaluate single-page retrieval, failing to capture realistic scenarios that require evidence aggregation across multiple pages. To address these gaps, we introduce KoViDoRe, a benchmark for Korean visual document retrieval. The dataset is constructed from publicly available Korean documents with diverse layouts, including tables, figures, and multi-column structures. We develop a multi-stage data curation pipeline consisting of structured document parsing, synthetic query generation using both summary-based and context-based strategies, and relevance mapping with human verification. Using KoViDoRe, we evaluate a wide range of multimodal retrieval models and observe that current models struggle to effectively handle Korean visual document retrieval, particularly in settings involving structured content and diverse query types. Motivated by this finding, we further curate a large-scale training dataset, Ko-VDR Train Public, to support the development of retrieval models tailored to Korean visual documents. Together, KoViDoRe and Ko-VDR Train Public provide a unified benchmark and training resource for Korean visual document retrieval.'
+  attributes:
+    paper_type: long
+    presentation_type: poster
+  authors:
+  - first_name: Yongbin
+    institution: Kyung Hee University
+    last_name: Choi
+    openreview: ~Yongbin_Choi1
+  - first_name: Yongwoo
+    institution: Kyung Hee University
+    last_name: Song
+    openreview: ~Yongwoo_Song1
+  - first_name: Mujeen
+    institution: Kyung Hee University
+    last_name: Sung
+    openreview: ~Mujeen_Sung1
+  file: 24.pdf
+  id: 24
+  archival: True
+  title: 'KoViDoRe: A Benchmark for Korean Visual Document Retrieval'
+  attachments:
+    - type: copyright
+      file: 24.pdf
+- abstract: 'This paper presents our system description for the 2nd Workshop on Multimodal Augmented Generation via MultimodAl Retrieval (MAGMaR). Addressing the critical challenges of cross-lingual long-video comprehension, strict persona adherence, and zero-hallucination temporal grounding, we propose a fully training-free, two-stage cascaded Video RAG pipeline. Our architecture strategically decouples semantic retrieval from cognitive logical reasoning through a modality-aware division of labor. In the first stage, a high-recall semantic pre-fetching module employs dense retrieval using only high-fidelity visual summaries and global text descriptions, explicitly isolating noisy modalities (e.g., OCR and ASR) to maintain a pristine vector space. In the second stage, an Adaptive, Iterative, and Reasoning-based (A.I.R.) filtering agent, powered by a commercial Large Language Model (LLM), performs fine-grained cognitive reranking. The agent re-incorporates full multimodal contexts to enforce strict logical alignment with user personas, effectively pruning semantically similar but logically irrelevant candidates. Finally, a Prompt Sculpting mechanism constrains the generator to synthesize the distilled subset into strictly formatted JSON responses with exact chunk-level citations. Evaluated on the Full RAG track, our resource-aware approach demonstrates exceptional precision in both information retrieval and persona-conditioned generation.'
+  attributes:
+    paper_type: long
+    presentation_type: oral
+  authors:
+  - first_name: JiaXin
+    institution: Huazhong University of Science and Technology
+    last_name: Dai
+    openreview: ~JiaXin_Dai3
+  - first_name: Zehang
+    institution: Huazhong University of Science and Technology
+    last_name: Wei
+    openreview: ~Zehang_Wei1
+  - first_name: Jiamin
+    institution: Huazhong University of Science and Technology
+    last_name: Yan
+    openreview: ~Jiamin_Yan1
+  - first_name: Xiang
+    institution: Huazhong University of Science and Technology
+    last_name: Xiang
+    openreview: ~Xiang_Xiang1
+  file: sys-1.pdf
+  id: S-1
+  archival: True
+  title: 'Decoupling Semantics and Logic: A Training-Free Coarse-to-Fine Pipeline for Video Retrieval-Augmented Generation'
+  attachments:
+    - type: copyright
+      file: sys-1.pdf
+- abstract: 'Retrieval-augmented generation from videos requires systems to retrieve relevant audiovisual evidence from large corpora and synthesize it into coherent, attributed text. Current approaches struggle at both ends: retrieval methods fail on complex, multi-faceted queries that cannot be captured by a single embedding, while generation methods lack the high-level reasoning needed to synthesize across multiple videos and face memory constraints over long, multi-video contexts. We present MARQUIS: a three-stage pipeline that addresses these limitations through (1) query expansion, fusion, and reranking, (2) calibrated structured evidence extraction, and (3) article generation from extracted evidence, optionally controlled by an RLM. On the MAGMaR2026 shared task, we improve retrieval performance from 0.195 to 0.759 (nDCG@10). For article generation, ITER-QA-BASE improves average human score from 3.09 to 3.83 over the CAG baseline, while MARQUIS-RLM achieves a human score of 3.30 and the strongest citation recall among non-QA systems.'
+  attributes:
+    paper_type: long
+    presentation_type: oral
+  authors:
+  - first_name: Debashish
+    institution: Johns Hopkins University
+    last_name: Chakraborty
+    openreview: ~Debashish_Chakraborty1
+  - first_name: Dengjia
+    institution: Johns Hopkins University
+    last_name: Zhang
+    openreview: ~Dengjia_Zhang1
+  - first_name: Jialiang
+    institution: Johns Hopkins University
+    last_name: Jin
+    openreview: ~Jialiang_Jin1
+  - first_name: Katherine M.
+    institution: Johns Hopkins University
+    last_name: Guerrerio
+    openreview: ~Katherine_M._Guerrerio1
+  - first_name: Hanting
+    institution: Johns Hopkins University
+    last_name: Liu
+    openreview: ~Hanting_Liu1
+  - first_name: Hanxiang
+    institution: Johns Hopkins University
+    last_name: Qin
+    openreview: ~Hanxiang_Qin1
+  - first_name: Tyler
+    institution: Johns Hopkins University
+    last_name: Skow
+    openreview: ~Tyler_Skow1
+  - first_name: Alexander
+    institution: Johns Hopkins University
+    last_name: Martin
+    openreview: ~Alexander_Martin1
+  - first_name: Reno
+    institution: Johns Hopkins University
+    last_name: Kriz
+    openreview: ~Reno_Kriz1
+  - first_name: Benjamin
+    institution: Johns Hopkins University
+    last_name: Van Durme
+    openreview: ~Benjamin_Van_Durme2
+  file: sys-3.pdf
+  id: S-3
+  archival: True
+  title: 'MARQUIS: A Three-Stage Pipeline for Video Retrieval-Augmented Generation'
+  attachments:
+    - type: copyright
+      file: sys-3.pdf
+- abstract: 'Multi-video event understanding demands models that can locate and attribute query-relevant evidence scattered across long, heterogeneous video corpora. Existing large vision–language models (LVLMs) often underperform in this regime because they quickly exhaust their context budget and struggle to precisely localize evidentially important segments, frequently missing dense informational cues such as broadcast graphics, subtitles, and scoreboards. We introduce TRACE, an evidence grounding-guided framework that follows a \textit{ground-before-reasoning} strategy for multi-video event reasoning. Our approach first builds a structured, text-searchable timeline for each video using OCR and object detection. A text-only LLM then conducts query-aware evidence localization, selecting relevant moments prior to any downstream visual reasoning. The retrieved frames and their grounding summaries are subsequently used to steer LVLM-based claim generation and cross-video citation consolidation. Experiments on MAGMaR 2026 and WikiVideo demonstrate that structured grounding markedly boosts factual completeness and attribution fidelity. On the MAGMaR validation split, TRACE raises macro-average MiRAGE F1 from 0.705 to 0.811 compared to an unguided Qwen3-VL-30B baseline, with especially strong improvements in citation recall (0.440  0.628). The method also attains state-of-the-art results on the official MAGMaR 2026 leaderboard.'
+  attributes:
+    paper_type: long
+    presentation_type: poster
+  authors:
+  - first_name: Pengyu
+    institution: State University of New York at Buffalo
+    last_name: Yan
+    openreview: ~Pengyu_Yan1
+  - first_name: Akhil V S S
+    institution: State University of New York at Buffalo
+    last_name: Gorugantu
+    openreview: ~Akhil_V_S_S_Gorugantu1
+  - first_name: Mahesh
+    institution: State University of New York at Buffalo
+    last_name: Bhosale
+    openreview: ~Mahesh_Bhosale1
+  - first_name: Abdul
+    institution: State University of New York at Buffalo
+    last_name: Wasi
+    openreview: ~Abdul_Wasi1
+  - first_name: Vishvesh
+    institution: State University of New York at Buffalo
+    last_name: Trivedi
+    openreview: ~Vishvesh_Trivedi1
+  - first_name: David
+    institution: State University of New York at Buffalo
+    last_name: Doermann
+    openreview: ~David_Doermann2
+  file: sys-4.pdf
+  id: S-4
+  archival: True
+  title: 'TRACE: Evidence Grounding-Guided Multi-Video Event Understanding and Claim Generation'
+  attachments:
+    - type: copyright
+      file: sys-4.pdf
+- abstract: 'Grounded multi-video question answering over real-world news events requires systems to surface query-relevant evidence across heterogeneous video archives while attributing every claim to its supporting source. We introduce CRAFT (Critic-Refined Adaptive Key-Frame Targeting), a query-conditioned pipeline that combines dynamic keyframe selection, per-video ASR with multilingual fallback, and a hybrid critic loop to iteratively verify and repair claims before consolidation. The pipeline integrates UNLI temporal entailment, DeBERTa-v3 cross-claim screening, and a Llama-3.2-3B adjudicator, with a final citation-merging stage that emits each fact once with all supporting source identifiers. On MAGMaR~2026, CRAFT achieves the best overall average (0.739), reference recall (0.810), and citation F1 (0.635). We further evaluate on a MAGMaR-style conversion of WikiVideo with 52 non-overlapping event queries, where CRAFT also performs strongly (0.823 Avg), showing that its claim-centric evidence aggregation generalizes beyond MAGMaR. Ablations show that atomic claims, ASR, and the critic loop drive the main gains over the vanilla query-conditioned baseline. Code and implementation details are publicly available at \url{https://github.com/bhosalems/CRAFT}.'
+  attributes:
+    paper_type: long
+    presentation_type: poster
+  authors:
+  - first_name: Mahesh
+    institution: State University of New York at Buffalo
+    last_name: Bhosale
+    openreview: ~Mahesh_Bhosale1
+  - first_name: Abdul
+    institution: State University of New York at Buffalo
+    last_name: Wasi
+    openreview: ~Abdul_Wasi1
+  - first_name: Vishvesh
+    institution: State University of New York at Buffalo
+    last_name: Trivedi
+    openreview: ~Vishvesh_Trivedi1
+  - first_name: Pengyu
+    institution: State University of New York at Buffalo
+    last_name: Yan
+    openreview: ~Pengyu_Yan1
+  - first_name: Akhil V S S
+    institution: State University of New York at Buffalo
+    last_name: Gorugantu
+    openreview: ~Akhil_V_S_S_Gorugantu1
+  - first_name: David
+    institution: State University of New York at Buffalo
+    last_name: Doermann
+    openreview: ~David_Doermann2
+  file: sys-5.pdf
+  id: S-5
+  archival: True
+  title: 'CRAFT: Critic-Refined Adaptive Key-Frame Targeting for Multimodal Video Question Answering'
+  attachments:
+    - type: copyright
+      file: sys-5.pdf
