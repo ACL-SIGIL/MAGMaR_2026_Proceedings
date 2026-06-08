@@ -10,26 +10,6 @@
 - title: Oral Presentations
   start_time: 2026-07-04 11:00:00
   end_time: 2026-07-04 12:30:00
-  subsessions:
-    - end_time: 2026-07-04 12:30:00
-      papers:
-        - end_time: 2026-07-04 11:15:00
-          id: 
-          start_time: 2026-07-04 11:00:00
-        - end_time: 2026-07-04 11:30:00
-          id: 
-          start_time: 2026-07-04 11:15:00
-        - end_time: 2026-07-04 11:45:00
-          id: 
-          start_time: 2026-07-04 11:30:00
-        - end_time: 2026-07-04 12:00:00
-          id: 
-          start_time: 2026-07-04 11:45:00
-        - end_time: 2026-07-04 12:15:00
-          id: 
-          start_time: 2026-07-04 12:00:00
-      start_time: 2026-07-04 11:00:00
-      title: Oral Presentations
 - end_time: 2026-07-04 14:00:00
   start_time: 2026-07-04 12:30:00
   title: Lunch
