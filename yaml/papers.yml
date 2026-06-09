@@ -533,3 +533,55 @@
   attachments:
     - type: copyright
       file: sys_5.pdf
+-abstract: 'This overview paper presents the results of the shared task for the second workshop on Multimodal Augmented Generation via Multimodal Retrieval (MAGMaR). In this shared task participants submitted systems focused on either (i) video retrieval or (ii) grounded generation of articles given retrieved videos. Teams could submit to either task. For the retrieval task, we had 2 participating teams that submitted a total of 17 systems -- all of which beat a baseline derived from the winner of last years shared task. On the generation side, we had 4 teams submit 16 systems. All teams had at least one system that received human annotation votes ranking at least 6 of the generated articles as being the best for that query.'
+  attributes:
+    paper_type: long
+    presentation_type: oral
+  authors:
+  - first_name: Alexander
+    institution: Johns Hopkins University
+    last_name: Martin
+    openreview: ~Alexander_Martin1
+  - first_name: Dengjia
+    institution: Johns Hopkins University
+    last_name: Zhang
+    openreview: ~Dengjia_Zhang1
+  - first_name: Joel
+    institution: OpenAI
+    last_name: Brogan
+    openreview: ~Joel_Robert_Gray_Brogan1
+  - first_name: Francis
+    institution: University of Maryland, Baltimore County
+    last_name: Ferraro
+    openreview: ~Francis_Ferraro1
+  - first_name: Jeremy
+    institution: Air Force Research Laboratory
+    last_name: Gwinnup
+    openreview: ~Jeremy_Gwinnup1
+  - first_name: Reno
+    institution: Human Language Technology Center of Excellence, Johns Hopkins University
+    last_name: Kriz
+    openreview: ~Reno_Kriz1
+  - first_name: Teng
+    institution: University of Amsterdam
+    last_name: Long
+    openreview: ~Teng_Long2
+  - first_name: Kenton
+    institution: Human Language Technology Center of Excellence, Johns Hopkins University
+    last_name: Murray
+    openreview: ~Kenton_Murray1
+  - first_name: Andrew
+    institution: Human Language Technology Center of Excellence, Johns Hopkins University
+    last_name: Yates
+    openreview: ~Andrew_Yates2
+  - first_name: Xiang
+    institution: Huazhong University of Science and Technology
+    last_name: Xiang
+    openreview: ~Xiang_Xiang1
+  file: sys_6.pdf
+  id: S-6
+  archival: True
+  title: 'Findings of the MAGMaR 2026 Shared Task'
+  attachments:
+    - type: copyright
+      file: sys_6.pdf
